@@ -19,7 +19,10 @@ Contact Section
 ===============*/
 .contactBg{
 	background-color: rgba(85, 204, 125, 0.6);
-	height: 1000px;
+	height: auto;
+	min-height: 100%;
+	width: 100%;
+	position: absolute;
 	background-size: cover;
 }
 .contact{
@@ -69,7 +72,8 @@ Contact Section
 	=============*/
 	.contactFormBg{
 		background-color: rgba(85, 204, 125, 0.6);
-		height: 1300px;
+		height: auto;
+		min-height: 100%;
 		width: 100%;
 		background-size: cover;
 		position: absolute;
@@ -77,6 +81,14 @@ Contact Section
 
 	#contactForm{
 		margin-top: 200px;
+		display: block;
+		position: absolute;
+		text-align: center;
+	}
+
+	#contactSuccess{
+		margin-top: 200px;
+		padding-bottom: 300px;
 		display: block;
 		position: absolute;
 		text-align: center;
