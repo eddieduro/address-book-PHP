@@ -1,3 +1,12 @@
+/*========
+Hero
+==========*/
+.hero{
+	background: url('https://images.unsplash.com/reserve/unsplash_5288cc8f3571d_1.JPG?crop=entropy&fit=crop&fm=jpg&h=725&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1275') center no-repeat;
+	background-size: full;
+	width: 100%;
+	height: 500px;
+}
 /*==========
 Contact Info
 ===========*/
@@ -24,6 +33,12 @@ Contact Info
 }
 .white-text {
 	color:white;
+}
+
+.contactImg{
+	height: 200px;
+	width: 200px;
+	border-radius: 50%;
 }
 /*============
 Contact Form
