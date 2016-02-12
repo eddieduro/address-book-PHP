@@ -6,35 +6,37 @@
 	<link rel="stylesheet" type="text/css" href="/../css/styles.css">
 </head>
 <body>
-	<div class="valign-wrapper">
-		<div class="hero responsive-img">
-			<h1>Stay in Touch</h1>
-			<h3>With your loved ones</h3>
+	<div>
+		<div class="hero responsive-img valign-wrapper">
+			<h2 class="white-text">Stay in Touch</h2>
+			<h2 class="white-text">With your loved ones</h2>
+		</div>
+	</div>
+	<div class="contactBg">
+		<div class="container contact z-depth-3">
+			{% if contacts is empty %}
+			<h2 class="center-align">Let's Create an Address book!</h2>
+			<h5 class="center-align"><a href="/create_contact">Add them here!</a></h5>
+				{% else %}
+			<h2 class="center-align">Here's your list of contacts:</h2>
+			<div class="row contactInfo">
+				<ul>
+				{% for contact in contacts %}
+					<ul class="col s6 toggleInfo center-align"><h4>{{contact.getLastName}}, {{contact.getFirstName}}</h4>
+					<li class="hideme center-align"><h6>{{contact.getStreet}}</h6></li>
+					<li class="hideme center-align"><h6>{{contact.getCity}}, {{contact.getZip}}</h6></li>
+					<li class="hideme center-align"><h6>{{contact.getPhoneNumber}}</h6></li>
+					<li class="hideme center-align"><img src='{{contact.getImage}}' class="contactImg"></li>
+					</ul>
+				{% endfor %}
+			</ul>
+			</div>
+			<button class="waves-effect waves-light btn"><a href="/create_contact" class="white-text">Add Another!</a></button>
+			<button class="waves-effect waves-light btn right"><a href="/delete_contacts" class="white-text">Delete Contacts</a></button>
+			{% endif %}
 		</div>
 	</div>
 	
-	<div class="container">
-		{% if contacts is empty %}
-		<h2>Let's Create an Address book!</h2>
-		<h5 class="center-align"><a href="/create_contact">Add them here!</a></h5>
-			{% else %}
-		<h2 class="center-align">Here's your list of contacts:</h2>
-		<div class="row">
-			<ul>
-			{% for contact in contacts %}
-				<ul class="col s6 toggleInfo center-align"><h4>{{contact.getLastName}}, {{contact.getFirstName}}</h4>
-				<li class="hideme center-align"><h6>{{contact.getStreet}}</h6></li>
-				<li class="hideme center-align"><h6>{{contact.getCity}}, {{contact.getZip}}</h6></li>
-				<li class="hideme center-align"><h6>{{contact.getPhoneNumber}}</h6></li>
-				<li class="hideme center-align"><img src='{{contact.getImage}}' class="contactImg responsive-img"></li>
-				</ul>
-			{% endfor %}
-		</ul>
-		</div>
-		<button class="waves-effect waves-light btn"><a href="/create_contact" class="white-text">Add Another!</a></button>
-		<button class="waves-effect waves-light btn right"><a href="/delete_contacts" class="white-text">Delete Contacts</a></button>
-		{% endif %}
-	</div>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
