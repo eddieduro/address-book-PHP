@@ -7,14 +7,16 @@
 		private $zip;
 		private $city;
 		private $phone_number;
+		private $image;
 
-		function __construct($first_name, $last_name, $street, $city, $zip, $phone_number){
+		function __construct($first_name, $last_name, $street, $city, $zip, $phone_number, $image){
 			$this->first_name = $first_name;
 			$this->last_name = $last_name;
 			$this->street = $street;
 			$this->zip = $zip;
 			$this->city = $city;
 			$this->phone_number = $phone_number;
+			$this->image = $image;
 		}
 
 		function getFirstName(){
@@ -39,6 +41,10 @@
 		
 		function getPhoneNumber(){
 			return $this->phone_number;
+		}
+
+		function getImage(){
+			return $this->image;
 		}
 
 		function save(){
