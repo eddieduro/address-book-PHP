@@ -13,7 +13,10 @@
 		<h2>Here's your list of contacts:</h2>
 		<ul>
 			{% for contact in contacts %}
-			<li>{{contact.getFirstName}}</li>
+			<li><h4>{{contact.getLastName}}, {{contact.getFirstName}}</h4></li>
+			<li><h6>{{contact.getStreet}}</h6></li>
+			<li><h6>{{contact.getCity}}, {{contact.getZip}}</h6></li>
+			<li><h6>{{contact.getPhoneNumber}}</h6></li>
 			{% endfor %}
 		</ul>
 		<button class="waves-effect waves-light btn"><a href="/create_contact">Add Another!</a></button>
