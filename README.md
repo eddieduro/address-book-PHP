@@ -1,11 +1,11 @@
-#Pizza | Project
-Order Yourself a Pizza!
+#Address Book | Project
+Add contacts to your address book!
 
 ###By Eddie Duro
 
 ##Description
 
-This project utilized js and jquery as well as BDD and TDD testing. Go ahead and order yourself a pizza from unicorn pizza | PDX. A few bugs - forms aren't saving data quite yet and google maps API loading slowly.
+This project utilized the knowledge we gained this week of PHP, Silex, & Twig. I also had to use my knowledge of OOP to complete this project. Feel free to add as many contacts as you would like!
 
 ##Setup
 
