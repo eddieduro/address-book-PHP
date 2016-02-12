@@ -16,5 +16,29 @@
 			$this->city = $city;
 			$this->phone_number = $phone_number;
 		}
+
+		function getFirstName(){
+			return $this->first_name;
+		}
+		
+		function getLastName(){
+			return $this->last_name;
+		}
+		
+		function getStreet(){
+			return $this->street;
+		}
+		
+		function getZip(){
+			return $this->zip;
+		}
+		
+		function getCity(){
+			return $this->city;
+		}
+		
+		function getPhoneNumber(){
+			return $this->city;
+		}
 	}
 ?>
