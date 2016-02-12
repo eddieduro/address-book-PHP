@@ -7,51 +7,73 @@ Hero
 	width: 100%;
 	height: 500px;
 }
-/*==========
-Contact Info
-===========*/
-.toggleInfo{
-	text-decoration: none;
-	border-bottom: 3px solid transparent;
-	width: 0px;
-	transition: 0.5s ease;
-	white-space: nowrap;
-	/*height: 40px;*/
-}
-.toggleInfo:hover{
-	cursor: pointer;
-	border-bottom: 3px solid rgba(255,147,98,1);
-	width: 200px;
+.valign-wrapper{
+	justify-content: space-around;
 }
 
-.hideme{
-	display: none;
+.heroText{
+	height: 250px;
 }
+/*==============
+Contact Section
+===============*/
+.contactBg{
+	background-color: rgba(85, 204, 125, 0.6); 
+}
+.contact{
+	background-color: white;
+	padding: 10px;
+	border: 2px solid white;
+}
+	/*==========
+	Contact Info
+	===========*/
+	.contactInfo{
+		padding-bottom: 100px;
+	}
+	.toggleInfo{
+		text-decoration: none;
+		border-bottom: 3px solid transparent;
+		width: 0px;
+		transition: 0.5s ease;
+		white-space: nowrap;
+		/*height: 40px;*/
+	}
+	.toggleInfo:hover{
+		cursor: pointer;
+		border-bottom: 3px solid rgba(255,147,98,1);
+		width: 200px;
+	}
 
-.show{
-	display: block;
-}
-.white-text {
-	color:white;
-}
+	.hideme{
+		display: none;
+	}
 
-.contactImg{
-	height: 200px;
-	width: 200px;
-	border-radius: 50%;
-}
-/*============
-Contact Form
-=============*/
+	.show{
+		visibility: visible;
+	}
+	.white-text {
+		color:white;
+	}
 
-input[type=number]:focus:not([readonly]){
-	border-bottom: 1px solid rgba(255,147,98,1);
-	box-shadow: 0 1px 0 0 rgba(255,147,98,1);
-}
-input[type=text]:focus:not([readonly]){
-	border-bottom: 1px solid rgba(255,147,98,1);
-	box-shadow: 0 1px 0 0 rgba(255,147,98,1);
-}
+	.contactImg{
+		height: 200px;
+		width: 200px;
+		border-radius: 50%;
+	}
+
+	/*============
+	Contact Form
+	=============*/
+
+	input[type=number]:focus:not([readonly]){
+		border-bottom: 1px solid rgba(255,147,98,1);
+		box-shadow: 0 1px 0 0 rgba(255,147,98,1);
+	}
+	input[type=text]:focus:not([readonly]){
+		border-bottom: 1px solid rgba(255,147,98,1);
+		box-shadow: 0 1px 0 0 rgba(255,147,98,1);
+	}
 
 
 /*===========
