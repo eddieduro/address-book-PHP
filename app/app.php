@@ -16,5 +16,9 @@
 		return $app['twig']->render('address_book.html.twig', array('contacts' => Contact::getAll()));
 	});
 
+	$app->get('/create_contact', function() use ($app) {
+		return $app['twig']->render('create_contact.html.twig');
+	});
+
 	return $app;
 ?>
