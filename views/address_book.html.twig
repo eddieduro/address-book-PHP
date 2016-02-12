@@ -13,9 +13,11 @@
 		<h2>Here's your list of contacts:</h2>
 		<ul>
 			{% for contact in contacts %}
-			<li>{{contact}}</li>
+			<li>{{contact.getFirstName}}</li>
 			{% endfor %}
 		</ul>
+		<button class="waves-effect waves-light btn"><a href="/create_contact">Add Another!</a></button>
+		<button class="waves-effect waves-light btn"><a href="/delete_contacts">Delete Contacts</a></button>
 		{% endif %}
 	</div>
 
