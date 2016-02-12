@@ -23,3 +23,12 @@ Contact Info
 	display: block;
 }
 
+/*===========
+Buttons
+=============*/
+.btn{
+	background-color: rgba(255,147,98,1);
+}
+.btn:hover{
+	background-color: rgba(205,147,98,1);
+}
