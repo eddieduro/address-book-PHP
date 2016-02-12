@@ -8,11 +8,13 @@
 	}
 
 	$app = new Silex\Application();
-	$app->request(new Silex\Provider\TwigServiceProvider, array(
+	$app->register(new Silex\Provider\TwigServiceProvider, array(
 		'twig.path'=> __DIR__.'/../views'
 	));
 
 	$app->get('/', function() use ($app) {
-		return $app['twig']->render('address_book.html.twig');
+		return $app['twig']->render('address_book.html.twig', array('contacts' => Contact::getAll()));
 	});
+
+	return $app;
 ?>
