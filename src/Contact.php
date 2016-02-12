@@ -8,7 +8,7 @@
 		private $city;
 		private $phone_number;
 
-		function __construct($first_name, $last_name, $street, $zip, $city, $phone_number){
+		function __construct($first_name, $last_name, $street, $city, $zip, $phone_number){
 			$this->first_name = $first_name;
 			$this->last_name = $last_name;
 			$this->street = $street;
