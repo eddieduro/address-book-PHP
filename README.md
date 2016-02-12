@@ -11,6 +11,8 @@ This project utilized the knowledge we gained this week of PHP, Silex, & Twig. I
 
 Clone this Repository
 
+Open terminal and type in composer update
+
 Open a simple HTTP server in the web directory of the cloned directory. For a mac run the following command in your terminal:
 
 php -S localhost:8000
