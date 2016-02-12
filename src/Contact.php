@@ -40,5 +40,13 @@
 		function getPhoneNumber(){
 			return $this->city;
 		}
+
+		function save(){
+			array_push($_SESSION['list_of_contacts'], $this);
+		}
+
+		static function getAll(){
+			return $_SESSION['list_of_contacts'];
+		}
 	}
 ?>
