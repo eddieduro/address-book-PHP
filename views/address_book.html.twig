@@ -6,11 +6,16 @@
 </head>
 <body>
 	<div class="container">
-		{% if contacts empty %}
+		{% if contacts is empty %}
 		<h2>Let's Create an Address book!</h2>
 		<h5><a href="/create_contact">Add them here!</a></h5>
 			{% else %}
-
+		<h2>Here's your list of contacts:</h2>
+		<ul>
+			{% for contact in contacts %}
+			<li>{{contact}}</li>
+			{% endfor %}
+		</ul>
 		{% endif %}
 	</div>
 
