@@ -3,6 +3,7 @@
 <head>
 	<title>Address Book</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="/../css/styles.css">
 </head>
 <body>
 	<div class="container">
@@ -13,10 +14,11 @@
 		<h2>Here's your list of contacts:</h2>
 		<ul>
 			{% for contact in contacts %}
-			<li><h4>{{contact.getLastName}}, {{contact.getFirstName}}</h4></li>
-			<li><h6>{{contact.getStreet}}</h6></li>
-			<li><h6>{{contact.getCity}}, {{contact.getZip}}</h6></li>
-			<li><h6>{{contact.getPhoneNumber}}</h6></li>
+			<ul class="toggleInfo"><h4>{{contact.getLastName}}, {{contact.getFirstName}}</h4>
+			<li class="hideme"><h6>{{contact.getStreet}}</h6></li>
+			<li class="hideme"><h6>{{contact.getCity}}, {{contact.getZip}}</h6></li>
+			<li class="hideme"><h6>{{contact.getPhoneNumber}}</h6></li>
+			</ul>
 			{% endfor %}
 		</ul>
 		<button class="waves-effect waves-light btn"><a href="/create_contact">Add Another!</a></button>
@@ -26,5 +28,6 @@
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/../js/scripts.js"></script>
 </body>
 </html>
