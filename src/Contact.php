@@ -38,7 +38,7 @@
 		}
 		
 		function getPhoneNumber(){
-			return $this->city;
+			return $this->phone_number;
 		}
 
 		function save(){
