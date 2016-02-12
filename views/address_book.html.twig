@@ -12,15 +12,18 @@
 		<h5><a href="/create_contact">Add them here!</a></h5>
 			{% else %}
 		<h2>Here's your list of contacts:</h2>
-		<ul>
+		<div class="row">
+			<ul>
 			{% for contact in contacts %}
-			<ul class="toggleInfo"><h4>{{contact.getLastName}}, {{contact.getFirstName}}</h4>
-			<li class="hideme"><h6>{{contact.getStreet}}</h6></li>
-			<li class="hideme"><h6>{{contact.getCity}}, {{contact.getZip}}</h6></li>
-			<li class="hideme"><h6>{{contact.getPhoneNumber}}</h6></li>
-			</ul>
+				<ul class="col s6 toggleInfo "><h4>{{contact.getLastName}}, {{contact.getFirstName}}</h4>
+				<li class="hideme"><h6>{{contact.getStreet}}</h6></li>
+				<li class="hideme"><h6>{{contact.getCity}}, {{contact.getZip}}</h6></li>
+				<li class="hideme"><h6>{{contact.getPhoneNumber}}</h6></li>
+				</ul>
 			{% endfor %}
 		</ul>
+		</div>
+		
 		<button class="waves-effect waves-light btn"><a href="/create_contact" class="white-text">Add Another!</a></button>
 		<button class="waves-effect waves-light btn"><a href="/delete_contacts" class="white-text">Delete Contacts</a></button>
 		{% endif %}
